@@ -53,11 +53,6 @@ const App = {
     // 1. текущий выбранный шаг
     // 2. выключена ли кнопка назад
     // 3. находимся ли мы на последнем шаге
-    classObject(){
-      return {
-        active: true
-      }
-    }, 
     currentIndex() {
       return this.activeIndex
     },
