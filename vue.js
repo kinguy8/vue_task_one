@@ -19,7 +19,6 @@ const App = {
   },
   methods: {
     prev() {
-      // когда нажимаем кнопку назад
       const index = this.activeIndex--
       return this.steps[index].text
     },
@@ -28,31 +27,22 @@ const App = {
       this.visible = !this.visible
       this.activeIndex = 0
       return this.visible
-      // начать заново
     },
     nextOfFinish() {
-      // кнопка вперед или закончить
       const index = this.activeIndex++
       return this.steps[index].text
     },
     setActive(idx) {
-      // когда нажимаем на определенный шаг
       this.activeIndex = idx
       this.currentIndex
     },
     finishCourse(){
       this.visible = !this.visible
-      console.log("before this.finished",this.finished)
       this.finished = true
-      console.log("after this.finished",this.finished)
       return this.visible
     }
   },
   computed: {
-    // тут стоит определить несколько свойств:
-    // 1. текущий выбранный шаг
-    // 2. выключена ли кнопка назад
-    // 3. находимся ли мы на последнем шаге
     currentIndex() {
       return this.activeIndex
     },
