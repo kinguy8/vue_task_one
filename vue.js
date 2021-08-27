@@ -20,7 +20,6 @@ const App = {
   methods: {
     prev() {
       const index = this.activeIndex--
-      return this.steps[index].text
     },
     reset() {
       this.finished = false
@@ -43,12 +42,12 @@ const App = {
     }
   },
   computed: {
-    currentIndex() {
+    currentStep() {
       return this.activeIndex
     },
 
     currentValue() {
-      return this.steps[this.activeIndex].text
+      return this.steps[this.activeIndex]
     },
 
   }
